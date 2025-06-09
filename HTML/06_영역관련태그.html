@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역관련태그</title>
+    <style>
+        div,span {
+            border: 1px solid black;
+        }
+
+        #div1,#span1 {
+            background-color: red;
+        }
+
+        #div2, #span2 {
+            background-color: yellow;
+        }
+
+        #div3, #span3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>영역 관련 태그</h1>
+
+    <!--
+        블럭 요소   : 한줄 단위로 영역을 차지하는 요소들
+                     줄바꿈이 이미 적용되어 다음 요소 출력시 해당 요소의 다음 줄에 추가된다
+                     ex) h, p, pre, ... , "div"
+        인라인 요소 : content내용에 해당되는 부분만 영역을 차지하는 요소들
+                     줄바꿈이 적용되지 않아 옆으로 연아어 져서 출력된다
+                     ex) b, s, mark, input, ... , "span"         
+    -->
+    
+    <h2>div태그와 span태그 차이점</h2>
+
+    <h3>div(division)태그 : 블럭요소 (한 줄 단위 영역 차지)</h3>
+    <div id="div1">첫번째 영역</div>
+    <div id="div2">두번째 영역</div>
+    <div id="div3">세번째 영역</div>
+
+    <h3>span 태그 : 인라인 요소(content영역만을 차지)</h3>
+    <span id="span1">1번째 영역</span><span id="span2">2번째 영역</span><span id="span3">3번째 영역</span>
+    <!--span#span${$번째 영역}*3-->
+
+    <h3>div 태그 : 컨텐츠 영역의 값을 커다란 사각형 박스로 영역을 지정</h3>
+    <div>
+        문말넌힝인 루딤응는 인목안은 술허사져는, 애샐 태들존에를. 자처안저사를 느하타의 우놕셜 롱콘안음은가 자있푸헤어요 우운지 룰담사마대가. 믱소상그 며더산기가 아피드아력 쥐인릴을, 드개핸아로 실니는, 앵덧응 이노이낀녹에를 전릐가 고드난소엔갱 서툠지. 시파가잉이를 너솠에 에디시 고주히훈덴 브빈어간 사사븡을. 가메바찌 힁오테는 자시곈으나 관진짔을 이탐하허오다. 겐아도민이다 네갈가를 노소도 잉부민쇼간억칭에서 각타슨냗은 오아는 꺼레를 믱냔, 너담시등 수긴이가. 올어어 긤에신로 산앵휴와 가릉우사고 여다는 으가다 나락으며 즌의. 믜리농먼는다 굖웨와 산박션득은 사멕어씬을 더아혈 가지에, 가개히고 우고가 밍오퉁는 아좈씸는 나아.
+    </div>
+
+    <h3>span 태그 : 컨텐츠 영역의 값을 문장단위로 영역을 지정</h3>
+    <span>
+        의드요졀혀프 진댜오러는, 조인이히는 수델, 엔톨만고 로잤에 마즐을 포은갑을 스응은 에우꺼삼굉, 안춭브짖을. 에가 재미챠차, 즉옘는다 지잔을 라거로 톤을자기는, 비악아, 도스선쳐딜라 갑발러차는. 쁜시라 우샘지어 엠토티세요, 삼가다돠고 망바뭔앤디조뇽낭두다 삭헨달의. 팅추므미에서 게랄논서도, 년갠 디흡니다 군날네므게 틑마러 콘임찼직은 빤디캠소란 싱씽은, 늬군지어 빅들핸뎝다는. 흔닎을 읫요스리가 레느우이룔히는 훠동송솝즉푼은 몽지그저다 키요오그고긴은. 맨어애마에 도단논틍르잉은 오임벵흡다 나굽임을 그아의 캈뱅어 이아으직. 차요싀를 닌잍믙턱다는 느타솝리찬죄에 르맨힘븐이다, 야압소잤으로.
+    </span>
+
+    <hr>
+
+    <h1>iFrame 태그</h1>
+    <p>
+        - 현재 문서 내에 다른 웹페이지문서를 추가하는 태그
+    </p>
+
+    <iFrame src="04_이미지와멀티미디어.html" width="600"></iFrame>
+
+    <br><br>
+    <iframe width="100%" height="380" src="https://www.youtube.com/embed/eUj_okGTdtA" 
+    title="FALL INTO SLEEP INSTANTLY - 스트레스, 불안 및 우울 상태의 치유 - INSOMNIA Relief" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+</body>
+</html>
