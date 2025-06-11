@@ -1,0 +1,103 @@
+.area1{background-color: red;}
+.area2{background-color: gold;}
+.area3{background-color: green;}
+.area4{background-color: blue;}
+.area5{background-color: purple;}
+
+.block{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    color: white;
+    display: block;
+}
+
+.inline{
+    display: inline;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+#container-1{
+    border: 3px solid black;
+    width: 323px;
+    height: 472px;
+}
+
+.div-1{
+    width: 100%;
+    height: 50%;
+}
+
+#container-1 > div:first-child{
+    background-color: red;
+    height: 30%;
+}
+
+#container-1 > div:last-child{
+    background-color: blue;
+    height: 70%;
+}
+
+#container-2{
+    border: 3px solid black;
+    width: 323px;
+    height: 472px;
+}
+
+.div-2{
+    width: 100%;
+    height: 33%;
+} 
+
+#container-2 > div:first-child{
+    background-color: red;
+    height: 20%;
+}
+
+#container-2 > div:nth-child(2){
+    background-color: green;
+    height: 30%;
+}
+
+#container-2 > div:last-child{
+    background-color: blue;
+    height: 50%;
+}
+
+#container-3{
+    border: 5px solid red;
+    width: 400px;
+    height: 200px;
+}
+
+.div-3{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+#container-3 > div:first-child{
+    background-color: red;
+}
+
+#container-3 > div:last-child{
+    background-color: blue;
+}
+
+.div-4{
+    border: 3px solid black;
+    height: 100px;
+}
+
+#test4{
+    background-color: deeppink;
+    /* display: none;*/
+    /* visibility: hidden;*/
+    /* 요소의 투명도를 조절하는 속성
+       opacity : 0(0~1 또는 0%~100%)
+    */
+    opacity: 0;
+}

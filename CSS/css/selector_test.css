@@ -1,46 +1,69 @@
+/* 1. */
 #container1[class=highlight]{
     background-color: yellow;
+}
+
+/* 2. */
+#container2 p {
+    color: pink;
 }
 #container2 > p {
     color: red;
 }
-#container2 > pre > p {
-    color: pink;
-}
+
+/* 3. */
 #container3 > input:not(input[type=submit]){
     border: 1px solid blue;
 }
-#container4 > h1, p[class=title]{
+
+/* 4. */
+#container4 > h1, #container4 > p[class=title]{
     color: green;
     font-size: 20px;
 }
+
+/* 5. */
 div[class^=user]{
     background-color: lightgrey;
 }
 div[class$=info]{
     color: red;
 }
-div[class*=product]{
+div[class~=product]{
     background-color: coral;
 }
 div[class|=admin]{
     background-color: greenyellow;
 }
+
+/* 6. */
 #container6 > input:focus{
     background-color: yellow;
 }
 #container6 > input:hover{
     background-color: green;
 }
+
+/* 7. */
 #container7 > li:nth-of-type(2){
     font-weight: bold;
 }
-div[class=container8] > p:last-child{
+
+/* 8. */
+div[class=container8] > p:only-of-type{
     color: blue;
 }
-#container9 > p[title|=important]:not(p[title|=not-important]){
+
+/* 9. */
+#container9 > p[title*=important]:not(#container9 > p[title*=not-important]){
     background-color: red;
 }
+
+/* 10. */
 ul[id=menu] > li[class=active]{
+    color: red;
+}
+/* 또는 */
+#menu > li.active{
     color: red;
 }
