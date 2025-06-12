@@ -1,0 +1,17 @@
+body{
+    box-sizing: border-box;
+}
+
+.container{
+    border: 2px solid black;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    height: 100px;
+}
+
+.main{
+    height: 100%;
+}
