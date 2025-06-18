@@ -25,6 +25,16 @@
 			return getSum;
 		} 
 
+		function mkAddFunc (){
+			//함수값 반환 함수 (출력은 alert사용)
+			let num = 0;
+			return function(){
+				const myadder = document.querySelector('#myadder');
+				num += myadder.value * 1; // myadder.value는 문자열로 반환, 1을 곱하는 방법으로 자동 형변환을 노림
+				console.log(num);
+			}
+		} 
+
 		var addFunc = mkAddFunc();
 	</script>
 </body>
