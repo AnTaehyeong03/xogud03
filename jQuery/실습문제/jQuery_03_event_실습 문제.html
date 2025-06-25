@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>jQuery_04_event_실습</title>
+    <title>jQuery_03_event_실습</title>
     <!--최신 jquery cdn 사용하기-->
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>  
 </head>
 <body>
     <h2>Event 1</h2>
     <script>
-        $(function(){
-            $("select[name=number]").on("change",function(){
-                const $selection = $("select[name=number] option:selected").text();
-                $("#selNum").html($selection);
-            });
+        // $(function(){
+        //     $("select[name=number]").on("change",function(){
+        //         const $selection = $("select[name=number] option:selected").text();
+        //         $("#selNum").html($selection);
+        //     });
+        // }); -- 내 코드
+        $("select").change(function(){
+            //const option = $(":selected");
+            const option = $(this).children().filter(":selected");
+            $("#selNum").html(option.html());
         });
     </script>
     
@@ -33,15 +38,20 @@
     <h2>Event 2</h2>
     <script>
         $(function(){
-            $("#event2 tr").click(function(){
-                const $selection1 = $(this).children().eq(0).html();
-                const $selection2 = $(this).children().eq(1).html();
-                const $selection3 = $(this).children().eq(2).html();
-                const $selection4 = $(this).children().eq(3).html();
-                $("#s1").html($selection1);
-                $("#s2").html($selection2);
-                $("#s3").html($selection3);
-                $("#s4").html($selection4);
+            $("#event2 tr").not(":first").click(function(){
+                // const $selection1 = $(this).children().eq(0).html();
+                // const $selection2 = $(this).children().eq(1).html();
+                // const $selection3 = $(this).children().eq(2).html();
+                // const $selection4 = $(this).children().eq(3).html();
+                // $("#s1").html($selection1);
+                // $("#s2").html($selection2);
+                // $("#s3").html($selection3);
+                // $("#s4").html($selection4);
+                const tds = $(this).children();
+                $("#s1").html(tds.eq(0).html());
+                $("#s2").html(tds.eq(1).html());
+                $("#s3").html(tds.eq(2).html());
+                $("#s4").html(tds.eq(3).html());
             });
         })
     </script>
@@ -62,23 +72,31 @@
     
     <h2>Event 3</h2>
     <script>
-        $(function(){
-            $("#event3 tr").click(function(){
-                clear();
-                const $selection1 = $(this).children().eq(0).html();
-                const $selection2 = $(this).children().eq(1).html();
-                const $selection3 = $(this).children().eq(2).html();
-                const $selection4 = $(this).children().eq(3).html();
-                $(this).css("background","red")
-                $("#s5").html($selection1);
-                $("#s6").html($selection2);
-                $("#s7").html($selection3);
-                $("#s8").html($selection4);
-            });
-        })
-        function clear(){
-            $("table *").removeAttr("style");
-        }
+        // $(function(){
+        //     function clear(){
+        //     $("table *").removeAttr("style");
+        // }
+        // $("#event3 tr").click(function(){
+            // clear();
+            // const $selection1 = $(this).children().eq(0).html();
+            // const $selection2 = $(this).children().eq(1).html();
+            // const $selection3 = $(this).children().eq(2).html();
+            // const $selection4 = $(this).children().eq(3).html();
+            // $(this).css("background","red")
+            // $("#s5").html($selection1);
+            // $("#s6").html($selection2);
+            // $("#s7").html($selection3);
+            // $("#s8").html($selection4);
+        $("#event3 tr").not(":first").click(function(){
+            $(this).siblings().css("background","")
+            $(this).css("background","red")
+
+            const tds = $(this).children();
+            $("#s5").html(tds.eq(0).html());
+            $("#s6").html(tds.eq(1).html());
+            $("#s7").html(tds.eq(2).html());
+            $("#s8").html(tds.eq(3).html());
+        });
     </script>
 
     <table id="event3" border="1">
